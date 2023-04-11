@@ -54,7 +54,7 @@ export class TrafficLightComponent implements OnInit {
   }
 
   pedestrianButtonClicked() {
-    if (this.selectedColor === 'Green' && this.stateCounter > 5) {
+    if (this.selectedColor === 'Green' && this.stateCounter > 30) {
       clearTimeout(this.trafficLightStateTimer);
       clearInterval(this.trafficLightInterval);
       this.scheduleAndSetTrafficLightState(30, 'Green')
